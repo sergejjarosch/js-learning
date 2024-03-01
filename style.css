@@ -1,7 +1,11 @@
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: em;
-    text-align: center;
+    
+}
+
+#mySubmit{
+    font-size: 1em;
 }
 
 
