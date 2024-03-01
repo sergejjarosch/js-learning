@@ -1,7 +1,7 @@
-const fullName = "Sergej      Jarosch";
 
-let firstName = fullName.slice(0, fullName.indexOf(" "));
-let lastName = fullName.slice(fullName.indexOf(" ")+1);
-lastName = lastName.replaceAll(" ", "");
-console.log(firstName);
-console.log(lastName);
+
+const email = "Bro1@gmail.com";
+
+let username = email.slice(0, email.indexOf("@"));
+let extension = email.slice(email.indexOf("@"));
+console.log(username, extension);
