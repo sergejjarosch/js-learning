@@ -1,7 +1,14 @@
 
 
-const email = "Bro1@gmail.com";
+let username = window.prompt("Enter your USername:");
 
-let username = email.slice(0, email.indexOf("@"));
-let extension = email.slice(email.indexOf("@"));
-console.log(username, extension);
+username = username.trim();
+let letter = username.charAt(0);
+letter = letter.toUpperCase();
+
+let extraChars = username.slice(1);
+extraChars = extraChars.toLowerCase();
+username = letter + extraChars;
+
+console.log(username);
+
