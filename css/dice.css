@@ -1,0 +1,28 @@
+#container{
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+button{
+    font-size: 1.5rem;
+    padding: 10px 45px;
+    border-radius: 10px;
+    border: none;
+    background-color: #075cd0;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #0c75ff;
+}
+button:active{
+    background-color: #1ba6fd;
+}
+input{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 35px 5px;
+}
