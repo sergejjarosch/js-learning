@@ -1,9 +1,7 @@
+let fruit = ["apple", "orange", "banana", "coconut"];
+fruit.sort().reverse();
 
-function isEven(number){
-    return number % 2 === 0 ? true : false;
+for (let fruits of fruit){
+    console.log(fruits);
 }
 
-function isValidEmail (email){
-    return email.includes("@") ? true : false;
-}
-console.log(isValidEmail("serg@code.com"));
