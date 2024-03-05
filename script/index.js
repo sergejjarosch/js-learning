@@ -2,18 +2,29 @@
 
 
 
-const grades = [75, 50, 90, 80, 65, 95];
 
-const maximum = grades.reduce(getMax);
-const minimum = grades.reduce(getMin);
+const number = [1,2,3,4,5,6];
 
-console.log(maximum);
-console.log(minimum);
+const squares = number.map(function (element){
+    return Math.pow(element, 2);
+});
 
-function getMax(accumulator, element){
-    return Math.max(accumulator, element);
-}
+const cubes = number.map(function (element){
+    return Math.pow(element, 3);
+});
 
-function getMin(accumulator, element){
-    return Math.min(accumulator, element);
-}
+
+const evenNums = number.filter(function (element){
+    return element % 2 === 0;
+})
+
+const oddNumbers = number.filter(function (element){
+    return element % 2 !== 0;
+})
+
+const total = number.reduce(function (accumulator, element) {
+    return accumulator + element;
+})
+
+console.log(total);
+
