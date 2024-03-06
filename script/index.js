@@ -1,11 +1,14 @@
-
-
-const person1 = {
-    name: "Spongebob",
-    favFood: "Hamburgers",
-    seyHallo:function(){console.log(`Hi! I am ${this.name}!`)},
-    eat: function(){console.log(`${this.name} is eating ${this.favFood}`)}
+function Car (make, model, year, color){
+    this.make = make,
+    this.model = model,
+    this.year = year,
+    this.color = color,
+    this.drive = function(){console.log(`You drive the ${this.make} ${this.model}`)}
 }
 
-person1.seyHallo();
-person1.eat();
+const car1 = new Car("Tesla", "Model-3", 2024, "white");
+const car2 = new Car("Mercedes-Benz", "EQS", 2025, "red");
+const car3 = new Car();
+
+car1.drive();
+car2.drive();
