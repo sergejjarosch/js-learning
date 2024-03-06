@@ -1,48 +1,59 @@
 
 
-class Rectangle{
-    constructor(width, hight){
-        this.width = width;
-        this.hight = hight;
+
+class Person{
+
+    constructor(firstName, lastName, age){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
     }
 
-    set width(newWidth){
-        if (newWidth > 0) {
-            this._width = newWidth;
+    set firstName(newFirstName){
+        if(typeof newFirstName === "string" && newFirstName.length >0 ){
+            this._firstName = newFirstName;
         }
         else {
-            console.error("Width must be a positive number");
+            console.error("First name musst be a non-empty string ")
         }
     }
-
-    set hight(newHight){
-        if (newHight > 0) {
-            this._hight = newHight;
+    set lastName(newLastName){
+        if(typeof newLastName === "string" && newLastName.length >0 ){
+            this._lastName = newLastName;
         }
         else {
-            console.error("Hight must be a positive number");
+            console.error("Last name musst be a non-empty string "); 
         }
     }
 
-    get width(){
-        return this._width.toFixed(1) + "cm";
+    set age(newAge){
+        if (typeof newAge === "number" && newAge >= 0 ) {
+            this._age = newAge;
+        }
+        else {
+            console.error("Age must be a non-negative number  "); 
+        }
+    }
+    get firstName(){
+        return this._firstName;
+    }
+    get lastName(){
+        return this._lastName;
+    }
+    get fullName(){
+        return this._firstName + " " + this._lastName;
     }
 
-    get hight(){
-        return this._hight.toFixed(1) + "cm";
+    get age(){
+        return this._age;
     }
-
-    get area(){
-        return (this._width * this._hight).toFixed(1) + "cm^2";
-    }
+    
 }
 
-const rectangle = new Rectangle(3, 4);
 
-rectangle.width = 5;
-rectangle.hight =10;
+const person = new Person("Spongebob", "Squarepants", 30);
+console.log(person.firstName);
+console.log(person.lastName);
+console.log(person.fullName);
+console.log(person.age);
 
-
-console.log(rectangle.width);
-console.log(rectangle.hight);
-console.log(rectangle.area);
