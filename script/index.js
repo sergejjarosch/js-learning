@@ -1,24 +1,46 @@
 
 
-class User{
-    static userCount = 0;
+class Animal{
+    alive = true;
 
-    constructor(username){
-        this.username = username;
-        User.userCount++;
+    eat(){
+        console.log(`This ${this.name} is eating`);
     }
-    static getUserCount(){
-        console.log(`There are ${this.userCount} users`);
-    }
-
-    sayHello(){
-        console.log(`Hello, my username is ${this.username}`);
+    sleep(){
+        console.log(`Zhis ${this.name} is sleaping`);
     }
 }
+class Rabit extends Animal{
+    name = "rabit";
 
-const user1 = new User("Spongebob");
-const user2 = new User("Patrick");
-const user3 = new User("Sandy");
+    run(){
+        console.log(`This ${this.name} is runing`);
+    }
+}
+class Fish extends Animal{
+    name = "Fish";
 
-user1.sayHello();
-User.getUserCount();
+    swim(){
+        console.log(`This ${this.name} is swimming`);
+    }
+}
+class Hawk extends Animal{
+    name = "Hawk";
+
+    fly(){
+        console.log(`This ${this.name} is flaing`);
+    }
+}
+const rabit = new Rabit();
+const fish = new Fish();
+const hawk = new Hawk();
+
+
+console.log(rabit.alive);
+rabit.eat();
+rabit.sleep();
+fish.eat();
+
+rabit.run();
+fish.swim();
+hawk.fly();
