@@ -1,46 +1,48 @@
 
 
-class Animal{
-    alive = true;
-
-    eat(){
-        console.log(`This ${this.name} is eating`);
+class Rectangle{
+    constructor(width, hight){
+        this.width = width;
+        this.hight = hight;
     }
-    sleep(){
-        console.log(`Zhis ${this.name} is sleaping`);
+
+    set width(newWidth){
+        if (newWidth > 0) {
+            this._width = newWidth;
+        }
+        else {
+            console.error("Width must be a positive number");
+        }
+    }
+
+    set hight(newHight){
+        if (newHight > 0) {
+            this._hight = newHight;
+        }
+        else {
+            console.error("Hight must be a positive number");
+        }
+    }
+
+    get width(){
+        return this._width.toFixed(1) + "cm";
+    }
+
+    get hight(){
+        return this._hight.toFixed(1) + "cm";
+    }
+
+    get area(){
+        return (this._width * this._hight).toFixed(1) + "cm^2";
     }
 }
-class Rabit extends Animal{
-    name = "rabit";
 
-    run(){
-        console.log(`This ${this.name} is runing`);
-    }
-}
-class Fish extends Animal{
-    name = "Fish";
+const rectangle = new Rectangle(3, 4);
 
-    swim(){
-        console.log(`This ${this.name} is swimming`);
-    }
-}
-class Hawk extends Animal{
-    name = "Hawk";
-
-    fly(){
-        console.log(`This ${this.name} is flaing`);
-    }
-}
-const rabit = new Rabit();
-const fish = new Fish();
-const hawk = new Hawk();
+rectangle.width = 5;
+rectangle.hight =10;
 
 
-console.log(rabit.alive);
-rabit.eat();
-rabit.sleep();
-fish.eat();
-
-rabit.run();
-fish.swim();
-hawk.fly();
+console.log(rectangle.width);
+console.log(rectangle.hight);
+console.log(rectangle.area);
