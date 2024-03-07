@@ -6,11 +6,15 @@ const fruits = [{name: "apple", color: "red", calories:95},
 
 fruits.push({name: "grapes", color: "purple", calories: 62});
 
-const yelowFruits = fruits.filter(fruit => fruit.color === "yellow");
-const lowCalFruits = fruits.filter(fruit => fruit.calories < 100);
-const highCalFruits = fruits.filter(fruit => fruit.calories > 100);
 
-console.log(yelowFruits);
-console.log(lowCalFruits);
-console.log(highCalFruits);
+const maxFruits = fruits.reduce((max, fruit) => 
+                                fruit.calories > max.calories ?
+                                fruit : max );
+
+const minFruits = fruits.reduce((min, fruit) => 
+                                fruit.calories < min.calories ?
+                                fruit : min );
+console.log(maxFruits);
+console.log(minFruits);
+
 
